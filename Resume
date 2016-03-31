@@ -1,0 +1,174 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a modified ONE COLUMN version of
+% the following template:
+% 
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Chelsea}{Blake}{
+70 Old Queen Lake RD Phillipston MA 01331\\
+%\urlstyle{same}\url{http://example.com} \\
+\href{mailto:chelsea.blake11@gmail.com}{chelsea.blake11@gmail.com} | 978.895.6370
+
+}
+
+LinkedIn:// \href{https://www.linkedin.com/in/chelsea-blake-35b40571}{\custombold{Chelsea Blake}}
+
+GitHub:// \href{https://github.com/chelseablake11}{\custombold{Chelsea Blake}}
+
+%\begin{center}
+%\huge\color{subheadings}\custombold{LIFELONG LEARNER}
+%\end{center}
+
+\section{Experience}
+
+\runsubsection{UNE- Biology Department}
+\descript{| Laboratory Preparation assistant and Greenhouse Supervisor }
+\location{September 2012 – Present | Biddeford, ME}
+Laboratory Preparation
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Set up and broke down Biology 105 Laboratory classes.
+%\item Fed and cleaned animals and tanks found in the Laboratory.
+\end{tightemize}
+Greenhouse Supervisor
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Trained workers, set up schedules, and answered worker questions.
+\item Created and completed tasks in Greenhouse.
+%\item Landscaping.
+\end{tightemize}
+\sectionsep 
+
+\runsubsection{UNE-Mathematics Department }
+\descript{| Pre-calculus, Calculus 1, and Computer Programming with \textsc{Matlab} Teacher's Assistant  }
+\location{January 2014 – December 2015 | Biddeford, ME}
+Pre-Calculus/Calculus 1 Teacher's Assistant
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Created practice problems, homework problems, and solutions. 
+\item Typed problem sets in \LaTeX.
+\item Created class lecture presentations in Beamer(\LaTeX).
+%\item Graded student's assignments.
+\end{tightemize}
+Computer Programming with \textsc{Matlab} Teacher's Assistant
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Attended classes to assist professor and answer student's questions.
+%\item Graded student's assignments.
+\end{tightemize}
+\sectionsep 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{UNE Mathematics Department}
+\descript{| Undergraduate Senior Research in Measure Theory}
+\location{December 2015 – Present | Biddeford, ME}
+Working under \textbf{\href{http://www.une.edu/people/michael-arciero}{Michael Arciero}} on Theoretical Mathematical Research on rational ratios of frequencies to create musical notes compared to western musical even tempered tuning with an irrational frequency ratio on the order of $2^\frac{1}{12}$. Thesis to be written and submitted for publication. 
+\sectionsep
+
+\runsubsection{UNE School of Pharmacy}
+\descript{| Pharmaceutical Research in Computational Chemistry}
+\location{May 2015 – August 2015 | Portland, ME}
+Worked under \textbf{\href{http://www.une.edu/people/olgun-guvench}{Olgun Guvench}} on computational pharmaceutical. Used Bash, VMD, NAMD, CHARMM, and other computer languages to make simulations of various molecules. The focus of this research was on biglycan, an important molecule in the body. As the end product of the research, the first biologically relevant simulation of biglycan was created.  Publication submitted. Also taught the basics of chemistry to a class of fourth and fifth graders at Howard C. Reiche Community School in Portland Maine. Finally, recreated a website for the Guvench Lab.  \textbf{\href{http://guvenchlab.org/}{guvenchlab.org}}.
+\sectionsep
+
+\section{Education}
+\runsubsection{University of New England}
+\descript{| BS in Applied Mathematics}
+\location{Minor in Philosophy,
+College of Arts and Sciences | Expected May 2016 | Biddeford, ME}
+Dean's List (Fall 2014, Spring/Fall 2015) \textbullet{}
+Cum. GPA: 3.24 / 4.0 \textbullet{}
+Major GPA: 3.49 / 4.0
+\sectionsep  
+
+
+
+
+\section{Skills}
+\begin{minipage}[t]{.6\textwidth}
+\subsection{Programming}
+\location{Over 1000 lines:}
+ \textsc{Matlab} \textbullet{} Python \\
+ Awk \textbullet{} Bash \textbullet{} \LaTeX\ \\ 
+ CHARMM \textbullet{} NAMD \textbullet{} VMD \\ 
+ C++ \textbullet{} Html \\
+\location{Familiar:}
+Java \textbullet{}  JavaScript 
+\sectionsep
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.35\textwidth}
+\subsection{Work}
+ Supervising  \textbullet{} Data Taking\\
+ People Skills \textbullet{} Training \\ 
+ Laboratory Preparation \\
+ Laboratory and Field Work \\
+\sectionsep
+\end{minipage}
+\end{document}  \documentclass[]{article}
