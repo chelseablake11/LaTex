@@ -1,0 +1,164 @@
+\documentclass{article}
+\title{Uniform Distribution Proof}
+\author{Chelsea Blake}
+
+
+
+\begin{document}
+\maketitle
+
+\begin{proof}
+\begin{equation}
+\textrm{Show that if} $\mu_n=\frac{1}{n} \sum \limits_{k=1}^{n} \delta_{\frac{k}{n}}$ 
+\begin{center}
+\textrm{then} 
+
+$\lim \limits_{n \rightarrow \infty} \mu_n [a,b] = b-a$
+\end{center}
+\end{equation}
+%---- fix this ------------------------------%
+\begin{center}
+Where $\delta_{\frac{k}{n} ([0,a])=$
+\\
+\begin{cases}  
+      1 & \textrm{ for $\frac{k}{n} \in [0,a]$}  \\
+      0 & \textrm{ for $\frac{k}{n} \not \in [0,a]$} 
+\end{cases}
+\end{center}
+%--------------------------------------------------%
+\\
+\\
+\textit{First lets look at an example.}
+\\
+\begin{center}
+Case 1: $[0,1]$
+\\
+$\mu_n [0,1]=\frac{1}{n} \sum \limits_{k=1}^n \delta_{\frac{k}{n}}([0,1])$ 
+\\
+We see that $ \delta_{\frac{k}{n}}([0,1])=1 \; \; \forall \; k=1,2,3,$...
+\\
+
+$\frac{1}{n} \sum 1 = \frac{1}{n} n = 1= 1-0 = b-a$ 
+So Case 1 works.
+\end{center}
+\\
+\\
+\textit{Now we try to make a general proof.} 
+\\
+\\
+Given any $n$ and $a$, there is a $l$ such that
+\\
+$a-\frac{1}{n} \le \frac{l}{n} \le a \le \frac{l+1}{n} \le a + \frac{1}{n}$
+\\
+\\
+\textit{Firstly,} we will look at
+\\
+\begin{equation}
+$\mu_n [0,a]= \frac{1}{n} \sum \limits_{k=1}^{n} \delta_{\frac{k}{n}} [0,a]$ 
+\end{equation}
+\\
+We can then break the sum into to parts, $\sum \limits_{k=1}^{n}= \sum \limits_{k=1}^{l} + \sum \limits_{k=l+1}^{n}$ 
+\\
+$\frac{1}{n} (\sum \limits_{k=1}^{l} \delta_{\frac{k}{n}}[0,a] + \sum \limits_{k=l+1}^{n} \delta_{\frac{k}{n}} [0,a])$
+\\
+Where $\sum \limits_{k=1}^{l} \delta_{\frac{k}{n}}[0,a]=\sum \limits_{k=1}^{l} 1= l$ because $\frac{l}{n} \le a$ 
+\\
+and $\sum \limits_{k=l+1}^{n} \delta_{\frac{k}{n}} [0,a]=0$ because $\frac{l+1}{n}}} > a$ 
+\\
+We then see that equation (2) equals
+\\
+$\frac{1}{n}(l+0)=\frac{1}{n} (l)=\frac{l}{n}$
+\\
+\\
+We now want to take $\lim \limits_{n \rightarrow \infty}$ of $\frac{l}{n}$
+\\
+\\
+Looking back at the inequality stated above we see that given any $n$ and $a$, there is a $l$ such that
+\\
+$a-\frac{1}{n} \le \frac{l}{n} \le a \le \frac{l+1}{n} \le a + \frac{1}{n}$
+\\
+\\
+Taking the limit of each side of the inequality we see that
+\\
+$\lim \limits_{n \rightarrow \infty} \; a-\frac{1}{n} \rightarrow a$
+\\
+and  $\lim \limits_{n \rightarrow \infty} \; a+\frac{1}{n} \rightarrow a$
+\\
+\\
+Then using the Squeeze Theorem:
+\\
+$\lim \limits_{n \rightarrow \infty}$ of $a-\frac{1}{n} \le \frac{l}{n} \le a + \frac{1}{n}= \lim \limits_{n \rightarrow \infty} \; a-\frac{1}{n} \rightarrow a \le \lim \limits_{n \rightarrow \infty} \frac{l}{n} \le \lim \limits_{n \rightarrow \infty} \; a+\frac{1}{n} \rightarrow a = a$
+\\
+\\
+We can finally conclude that  $\lim \limits_{n \rightarrow \infty}$ of $\frac{l}{n}=a$ which proves equation 2 to be true.
+\\
+if $\mu_n [0,a]= \frac{1}{n} \sum \limits_{k=1}^{n} \delta_{\frac{k}{n}} [0,a]$ then $\lim \limits_{n \rightarrow \infty} \mu_n (0,a) = a-0$
+\\
+\\
+\\
+We can similarly show that this proof is true for $(0,a),(0,a]$ and $[0,a)$ The change in open and closed set will only change whether the inequalities are strict or not in the inequality that related $n, l,$ and $a$ (Shown below). 
+\\
+\\
+Given any $n$, there is a $l$ such that We know that for $[0,a]$,
+\\
+
+$a-\frac{1}{n} \le \frac{l}{n} \le a \le \frac{l+1}{n} \le a + \frac{1}{n}$
+
+\\
+\\
+However we see that that, for example, Given any $n$, there is a $l$ such that We know that for $(0,a)$,
+\\
+$a-\frac{1}{n} < \frac{l}{n} < a < \frac{l+1}{n} < a + \frac{1}{n}$
+\\
+\\
+Putting this inequality into the proof above, we will still get the same answer that if $\mu_n [0,a]= \frac{1}{n} \sum \limits_{k=1}^{n} \delta_{\frac{k}{n}} [0,a]$ then $\lim \limits_{n \rightarrow \infty} \mu_n (0,a) = a-0$
+\\
+This will be true for all arrangements of the open/closed set.
+\\
+\\
+\\
+\begin{equation}
+\textrm{Because $a$ is a variable, we can show the same proof for $[0,b]$ stating if}
+$\mu_n [0,b]= \frac{1}{n} \sum \limits_{k=1}^{n} \delta_{\frac{k}{n}} [0,b]$ then $\lim \limits_{n \rightarrow \infty} \mu_n [0,b] = b-0$
+\end{equation}
+\\
+\\
+\\
+%Finally, we proved above that $\mu [a,b]= \mu [0,b]- \mu [0,a]$ and therefor,
+%\\
+%if $\mu_n=\frac{1}{n} \sum \limits_{k=1}^{n} \delta_{\frac{k}{n}}$ then $\lim %\limits_{n \rightarrow \infty} \mu_n [a,b] = (b-0)-(a-0)=b-a$ 
+%\\
+%\\
+
+We will now show that $\mu [a,b]= \mu [0,b]- \mu [0,a]$
+
+\\
+\begin{equation}
+
+$[0,b]=[0,a] \cup (a,b]$
+
+\end{equation}
+\\
+\\
+\\
+Using equation 4, we can infer that $\mu_n[0,b]= \mu_n[0,a] \cup \mu_n(a,b]$
+\\
+\\
+We then manipulate the equation and take $\lim \limits_{n \rightarrow \infty}$ to get
+\\
+$\lim \limits_{n \rightarrow \infty} \mu_n [0,b] - \lim \limits_{n \rightarrow \infty} \mu_n[0,a] = \lim \limits_{n \rightarrow \infty} \mu_n (a,b]$ We know from above that $\lim \limits_{n \rightarrow \infty} \mu_n [0,b]=b$ and $\lim \limits_{n \rightarrow \infty} \mu_n[0,a] = a$ 
+\\
+\\
+\\
+so therefore, $\lim \limits_{n \rightarrow \infty} \mu_n (a,b]=b-a$
+\\
+\\
+And similarly equation 1. 
+
+
+\end{proof}
+
+
+
+
+\end{document}

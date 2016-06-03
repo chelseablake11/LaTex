@@ -1,0 +1,109 @@
+\documentclass[ebook,12pt,oneside,openany]{memoir}
+\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\usepackage{mathtools}
+\usepackage{url}
+
+% for placeholder text
+\usepackage{lipsum}
+
+\title{Pythagorean Fifth and Measure Theory- Proposal}
+\author{Chelsea Blake}
+
+\begin{document}
+\maketitle
+
+Music, at it's most basic form, is a group of frequencies. Some frequencies sound better put together than other frequencies, this is called harmonizing. The ratio of frequencies for good sounding harmonies, as believed for many, would be a ratio of low, simple numbers, like a $3:2$ ratio. The simple $3:2$ ratio is known as the Pythagorean fifth and is where my research will start.
+
+In most even tempered turned musical instruments today these simple ratios are not used. Instead irrational forms of $2^{\frac{1}{12}} \; Hz$ is used. For example the frequency of a key in a piano gets multiplied by $2^{\frac{1}{12}}$ of the frequency found on the key before it. The equivalent to the Pythagorean fifth, or a frequency ratio of $3 : 2$, would be to go up seven keys on a keyboard. The change in frequency would then be $2^{\frac{7}{12}}=1.498307 \approx 1.5= \frac{3}{2}$. We see that the irrational multiplier is extremely close to the rational multiplier.
+
+Most instruments in Western music use the even tempered tuning because of the way it works with the musical chords. These chords go C-D-E-F-G-A-B-C and then starts back at C and recycles again. Going up by a degree of $2^{\frac{1}{12}} \; Hz$ is the only way that you hit each chord and then get back to C exactly.  Going from a C chord back to a C chord is called an octave, and has a raise in frequency of $2 \; Hz$. In this research we will be looking at rises by $2^{\frac{7}{12}} \; Hz$ because it is closely related to the ratio $3:2$. Rising by the multiplier $2^{\frac{7}{12}} \; Hz$ is called the circle of fifths. To visualize the circle of fifths we say:
+\begin{center}
+$(2^{\frac{7}{12}})^n=2^m$ for some $n,m$ (specifically $n=12, m=1$).
+
+\end{center}
+
+
+Using the rational multiplier of $\frac{3}{2}$  and starting at chord C when the frequency got back to chord C it would be slightly off, making it not chord C at all. A new chord would be created and the frequency would never exactly hit the C chord. in other words 
+\begin{center}
+$(\frac{3}{2})^n \ne 2^m$ for any $n,m$. 
+\end{center}
+
+My research will be on the new chords that are made from the rational multiplier. These chords will be mapped to the unit circle for simplicity.The chords will be points $r$, the frequency will be $f(r)$, and the angle between points on the unit circle will be $\theta$. I will find these points by hand as well as write up a program on Matlab to find these points. I will identify ratios between the $\theta$'s. I will look for the limit as these frequencies get multiplied higher and higher to infinity. I will also prove that even as the frequency goes to infinity, it will never again reach chord C. 
+
+Measure theory is a branch of mathematics that looks at collection, or sets, and puts a positive real number measure to it (Gupta, 1). The sets that will be used for my research will be the frequency points found above and the subset $[0,2 \pi]$. After mapping the frequency points to the number line, I will be looking at the discrete measures to see if it weakly converges to a function. I will also be finding the Lebesgue Measure $\mu_{\mathhbb{L}}$ for the set and using it to find the density $\mu_{\rho}$ at the interval $[a,b]$
+Some important definitions to know for my research are
+\\
+
+\begin{defintion}
+
+\textbf{Definition 1.} \underline{Absolutely Continuous Measures}
+$$\mu(A)= \int_A f(x) \; dx$$ For some $f$.
+
+(Arciero's notes, 1)
+
+
+\end{definition}
+
+
+\begin{defintion}
+
+\textbf{Definition 2.} \underline{Discrete Measures}
+$$\mu = \sum a_i \delta_{x_i}$$ $$\mu(A)= \sum a_1 \; \; \{i|x_i \in A\}$$
+
+
+\end{definition}
+
+
+
+\begin{definition}
+
+
+\textbf{Definition 3.} \underline{Weak Convergence:} A sequence of positive measures $\mu_n$ will be said to converge weakly to a measure $\mu_{\infty} \; \; (\mu_n \xrightarrow[ ]{w} \mu_{\infty} $ if $\int \limits_0^{2 \pi} f \; d \mu_n \rightarrow \int \limits_0^{2 \pi} f \; d \mu_{\infty} $ for all continuous functions $f$ with $f(0)=f(2\pi)$.
+
+(Pakula, 0.3).
+
+
+\end{definition}
+
+\\
+
+\begin{defintion}
+
+\textbf{Definition 4.} \underline{Lebesgue Measures} are obtained from an increasing, right-continuous function $F : \mathbb{R} \rightarrow \mathbb{R}$, and assign to an open interval $[a,b]$ the measure
+\\
+
+$$\mu_{\mathhbb{L}} ([a,b])= f(b)-f(a)$$
+
+(Hunter, 30).
+
+\end{definition}
+\\
+\\
+
+
+
+Although just a few examples of Measure Theory, I will be using quite a bit of measure theory to help further my research. My end result will be to find the asymptotic distribution of the frequency points on the unit circle, or on a number line.
+
+
+
+
+\huge{\textbf{References}}
+
+
+\hangindent \small
+
+
+
+Gupta, Maya R. "A Measure Theory Tutorial (Measure Theory for Dummies)." University of Washington, Dept. of EE (n.d.): n. pag. Web. May 2006. <https://www.ee.washington.edu/techsite/papers/documents/UWEETR-2006-0008.pdf>.
+
+Hunter, John K. "Measure Theory." , University of California at Davis (n.d.): n. pag. Web. 2011. <https://www.math.ucdavis.edu/~hunter/measure_theory/measure_notes.pdf>.
+
+Pakula, Lewis. "Measures- an informal, non-rigorous introduction."Notes.28 Jan. 2016.
+
+Tao, Terrence. "An Introduction to Measure Theory." Department of Mathematics, UCLA (n.d.): n. pag. Web. 28 Jan. 2016. <http://www.faculty.jacobs-university.de/poswald/teaching/RealAnal2/handouts/TaoMeasureTheory.pdf>.
+
+
+
+
+\end{document}
